@@ -25,9 +25,10 @@ export default function Order(){
     return (
         <div className=' container mt-5'>
           <Link to = "/"><span><box-icon name='arrow-back'></box-icon></span></Link><h1>Orders</h1>
-
+              <div className="row">
            {   result.map((val,index)=>{
                 return(
+                  
                   <div className="col-md-6 col-lg-3" key={index}>
                   <div className="card p-2">
                     <img src={val.Image} className="card-img-top" alt="..."/>
@@ -40,6 +41,7 @@ export default function Order(){
                 )
               })
             } 
+            </div>
         </div>
       )
     }
